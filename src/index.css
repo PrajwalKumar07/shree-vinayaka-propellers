@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0B1F3A;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+.blueprint-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.08);
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(11,31,58,0.96),
+    rgba(11,31,58,0.7)
+  );
+}
+
+.wave-divider {
+  position: relative;
+}
+
+.wave-divider::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 100px;
+  background: radial-gradient(circle at 50% -20%, #123C73 40%, transparent 41%);
+}
+
+.service-card {
+  transition: 0.4s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(255,213,79,0.3);
+} 
